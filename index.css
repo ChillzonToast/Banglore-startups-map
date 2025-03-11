@@ -1,0 +1,369 @@
+:root {
+    --ui-background:#181718;
+}
+body {
+
+  font-family: "Geist", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+.leaflet-control-container {
+    display: none;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+#info {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    max-height: 600px;
+    background-color: var(--ui-background);
+    position: absolute;
+    border-radius: 12px;
+    top: 3vh;
+    left: 2%;
+    z-index: 1;
+    transition: max-height 0.3s ease;
+}
+
+
+.expand {
+    max-height: 95vh !important;
+}
+
+#searchbar {
+    background-color: #272625;
+    min-height: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #737373;
+    border-radius: 8px;
+    border: 1px solid #414141;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail img {
+    position: static;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
+#category {
+    z-index: 3;
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #272625;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #737373;
+    border-radius: 32px;
+    border: 1px solid #414141;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+hr {
+    border: 2px solid #272624;
+    margin: 0;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#name {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 2px;
+}
+
+#company {
+    font-size: 16px;
+    color: #8C8C8C;
+    margin-bottom: 4px;
+}
+
+#description {
+    font-size: 14px;
+    color: #8C8C8C;
+}
+
+h2 {
+    color: white;
+    font-size: 16px;
+}
+
+.founder-logo {
+    width: 15%;
+    height: fit-content;
+    border-radius: 8px;
+}
+
+.founder-name {
+    font-size: 14px;
+    color: white;
+}
+
+.founder-role {
+    font-size: 12px;
+    color: #8C8C8C;
+}
+
+#view-details {
+    font-size: 12px;
+    color: #B3B3B3;
+}
+
+.view-details-svg {
+    transition: transform 0.3s ease;
+}
+
+.transparent {
+    opacity: 0%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.unselected {
+    display: none !important;
+}
+
+.rotated {
+    transform: rotate(-180deg);
+}
+
+#searchInput {
+    width: 100%;
+    background-color: #00000000;
+    border: 0 !important;
+    color: #737373;
+}
+
+#searchInput:focus {
+    outline: 0;
+}
+
+#ext-links > a {
+    flex:1;
+}
+
+#ext-links > a > div {
+    background-color: #272625;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center ;
+    font-size: 14px;
+    border: 1px solid #535252 !important;
+}
+
+#logo-brand {
+    position: absolute;
+    bottom: 1%;
+}
+
+.company-detail-card {
+    flex: 1;
+    aspect-ratio: 10/9;
+    background-color: #272625;
+    border-radius: 8px;
+    position: relative;
+}
+
+.company-detail-card > div {
+    position: absolute;
+    bottom: 0;
+}
+
+.company-detail-card-data {
+    color: #DBDBDC;
+    font-size: 20px;
+    font-weight:500;
+}
+
+.company-detail-card-category {
+    color: #8C8C8C;
+    font-size: 12px;
+}
+
+.leaflet-marker-icon {
+    margin-left: -22px !important;
+    margin-top:-30px !important;
+}
+
+.leaflet-popup-content-wrapper,.leaflet-popup-tip {
+    background-color: var(--ui-background);
+}
+
+.popup-name {
+    font-size: 16px;
+    color: white;
+}
+
+.popup-company {
+    color: #8C8C8C;
+    font-size: 16px;
+}
+
+.leaflet-popup-content {
+    display: flex;
+    gap:10px;
+}
+
+.leaflet-popup-close-button {
+    display: none;
+}
+
+.leaflet-popup-content {
+    margin: 10px 20px 10px 20px;
+}
+
+#locate-filter {
+    position: fixed;
+    top: 3vh;
+    right: 10px;
+}
+
+#locate {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    background-color: var(--ui-background);
+}
+
+#filter {
+    max-width: 120px;
+    max-height: 44px;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 6px;
+    background-color: var(--ui-background);
+    color: white;
+}
+
+#filter a {
+    text-decoration: none;
+}
+
+.filter-content-active {
+    max-width: 350px !important;
+    max-height: 480px !important;
+}
+
+.filter-toggle-hide {
+    display: none !important;
+}
+/*  */
+.filter-container {
+    background: var(--ui-background);
+    border-radius: 10px;
+    width: 320px;
+}
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-header a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+.filter-header a:hover {
+    text-decoration: underline;
+}
+.filter-options .btn {
+    padding: 10px;
+    padding-inline: 20px;
+    background: var(--ui-background);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #272624;
+}
+.filter-container p {
+    font-size: 14px;
+}
+.filter-options .btn.active {
+    background: #272625;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.form-check-input:checked {
+    background-color: #0a84ff;
+    border-color: #0a84ff;
+}
+.apply-button {
+    width: 100%;
+    background: #272625;
+    color: white;
+    border: 1px solid #535252;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.apply-button:hover {
+    background: #555;
+}
+
+#filter span {
+    font-size: 14px;
+}
+
+.form-check-input {
+    background-color: #444 !important; 
+    border: 0 !important;
+    box-shadow: 0 0 0 0 rgba(255, 47, 69, 0.25) !important;
+}
+
+.form-check-input:checked {
+    background-color: #747474 !important; /* Custom blue color */
+    border-color: #747474 !important;
+}
