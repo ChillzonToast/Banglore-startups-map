@@ -18,12 +18,11 @@ var places = [
         "longtitude": 77.574506,
         "icon": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/xtrxzyiktapbusenpmzf",
         "thumb": "https://media.glassdoor.com/l/57/15/3f/28/hq.jpg?signature=00e5d86551169694e4eefdb41592b7d6b2e0ffa379ec1f5de02fb28c29bf6d5c",
-        "company": "Fintech",
+        "category": "Fintech",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
         "website": "https://marketfeed.com/",
         "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
         "founders": [{ "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }],
-        "category": "Trading and Business",
         "company-details": {
             "valuation":["$1.47","billion"],
             "employees":"77",
@@ -36,7 +35,6 @@ var places = [
         "longtitude": 77.576866,
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
         "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
-        "company": "Fintech",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
         "website": "https://marketfeed.com/",
         "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
@@ -54,7 +52,6 @@ var places = [
         "longtitude": 77.578304,
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
         "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
-        "company": "Fintech",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
         "website": "https://marketfeed.com/",
         "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
@@ -83,7 +80,7 @@ places.forEach((place) => {
     marker._icon.style.objectFit = "cover";
     marker.details = place;
     place.marker=marker;
-    marker.bindPopup("<p class=\"m-0 popup-name\">"+place.name+"</p><p class=\"m-0 popup-company\">"+place.company+"</p>");
+    marker.bindPopup("<p class=\"m-0 popup-name\">"+place.name+"</p><p class=\"m-0 popup-company\">"+place.category+"</p>");
     marker.addEventListener("click", (m) => {
         if (unselected == 1) {
             for (var i = 1; i < document.getElementById("info").children.length; i++) {
@@ -93,7 +90,7 @@ places.forEach((place) => {
         }
         document.getElementById("logo").src = place.icon;
         document.getElementById("name").textContent = place.name;
-        document.getElementById("company").textContent = place.company;
+        document.getElementById("company").textContent = place.category;
         document.getElementById("description").textContent = place.desc;
         document.getElementsByClassName("thumbnail")[0].children[0].src = place.thumb;
         document.getElementById("logo").src = place.icon;
@@ -171,7 +168,7 @@ document.getElementById("searchInput").addEventListener("keydown", (e) => {
                 place.marker.openPopup() 
                 document.getElementById("logo").src = place.icon;
                 document.getElementById("name").textContent = place.name;
-                document.getElementById("company").textContent = place.company;
+                document.getElementById("company").textContent = place.category;
                 document.getElementById("description").textContent = place.desc;
                 document.getElementsByClassName("thumbnail")[0].children[0].src = place.thumb;
                 document.getElementById("logo").src = place.icon;
