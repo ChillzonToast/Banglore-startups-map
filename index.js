@@ -254,3 +254,19 @@ function locateUser() {
 document.getElementById("locate").addEventListener("click",(e)=>{
     locateUser();
 });
+
+map.setMaxBounds(map.getBounds());
+
+btns=document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn")
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle("active");
+    });
+}
+
+btns=document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn")
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle("active");
+    });
+}
