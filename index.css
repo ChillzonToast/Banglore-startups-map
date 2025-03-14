@@ -367,3 +367,25 @@ h2 {
     background-color: #747474 !important; /* Custom blue color */
     border-color: #747474 !important;
 }
+
+#alert-popup {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 50px;
+    color: #8C8C8C;
+    opacity: 100%;
+    transition: opacity 0.3s ease;
+}
+
+
+#alert-popup > div {
+    background-color: var(--ui-background);
+    border-radius: 8px;
+    border: 1px solid #414141;;
+}
+
+.popup-hidden {
+    opacity: 0% !important;
+}   

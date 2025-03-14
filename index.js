@@ -251,12 +251,17 @@ function locateUser() {
     map.setView([lat,long],map.getZoom());    
 }
 
-document.getElementById("locate").addEventListener("click",(e)=>{
-    locateUser();
-});
-
 map.setMaxBounds(map.getBounds());
-
+document.getElementById("locate").addEventListener("click",(e)=>{
+    if (map.getBounds().contains([lat,long])) {
+        locateUser();
+    } else {
+        document.getElementById("alert-popup").classList.toggle("popup-hidden");
+        setTimeout(() => {
+            document.getElementById("alert-popup").classList.toggle("popup-hidden");
+        }, 3000);
+    }
+});
 btns=document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn")
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", (event) => {
