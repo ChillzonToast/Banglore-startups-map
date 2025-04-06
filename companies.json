@@ -1,0 +1,53 @@
+[
+    {
+        "name": "MarketFeed",
+        "lattitude": 12.967509,
+        "longtitude": 77.574506,
+        "icon": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/xtrxzyiktapbusenpmzf",
+        "thumb": "https://media.glassdoor.com/l/57/15/3f/28/hq.jpg?signature=00e5d86551169694e4eefdb41592b7d6b2e0ffa379ec1f5de02fb28c29bf6d5c",
+        "linkedin": "https://www.linkedin.com/company/marketfeed/",
+        "website": "https://marketfeed.com/",
+        "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
+        "founders": [{ "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }],
+        "category": "Fintech",
+        "company-details": {
+            "valuation":["$1.47","billion"],
+            "employees":77,
+            "openings":0
+        }
+    },
+    {
+        "name": "NITC",
+        "lattitude": 12.964459,
+        "longtitude": 77.576866,
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
+        "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
+        "linkedin": "https://www.linkedin.com/company/marketfeed/",
+        "website": "https://marketfeed.com/",
+        "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
+        "founders": [{ "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }],
+        "category": "Trading and Business",
+        "company-details": {
+            "valuation":["$1.12","million"],
+            "employees":11,
+            "openings":1
+        }
+    },
+    {
+        "name": "NITC",
+        "lattitude": 12.968992,
+        "longtitude": 77.578304,
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
+        "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
+        "linkedin": "https://www.linkedin.com/company/marketfeed/",
+        "website": "https://marketfeed.com/",
+        "desc": "marketfeed started out in 2020 with a mission to democratise the stock market for all Indians. Our wild ambitions to ensure #tradingforall has pushed us to build cutting-edge applications and platforms that are set to redefine the trading experience for investors and traders.",
+        "founders": [{ "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }, { "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }, { "name": "Priya Sharma", "role": "CEO", "linkedin": "https://www.linkedin.com/in/ibinu-jaleel-163000323/", "pfp": "https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg" }],
+        "category": "Trading and Business",
+        "company-details": {
+            "valuation":["$1.67","billion"],
+            "employees":96,
+            "openings":6
+        }
+    }
+] 

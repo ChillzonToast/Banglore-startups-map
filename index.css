@@ -291,7 +291,7 @@ h2 {
 
 .filter-content-active {
     max-width: 350px !important;
-    max-height: 480px !important;
+    max-height: 520px !important;
 }
 
 .filter-toggle-hide {
@@ -377,15 +377,22 @@ h2 {
     color: #8C8C8C;
     opacity: 100%;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
 }
 
 
 #alert-popup > div {
     background-color: var(--ui-background);
     border-radius: 8px;
-    border: 1px solid #414141;;
+    border: 1px solid #414141;
+    pointer-events: none;
 }
 
 .popup-hidden {
     opacity: 0% !important;
 }   
+
+.marker-hide {
+    display: none !important;
+}
