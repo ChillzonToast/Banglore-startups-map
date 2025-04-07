@@ -232,10 +232,12 @@ for (var i = 0; i < btns.length; i++) {
 
 function hideMarker(marker) {
     marker._icon.classList.add("marker-hide");
+    marker._shadow.classList.add("marker-hide");
 }
 
 function showMarker(marker) {
     marker._icon.classList.remove("marker-hide");
+    marker._shadow.classList.remove("marker-hide");
 }
 
 function clearFilters() {
