@@ -41,9 +41,9 @@ function initializeMap() {
             document.getElementById("description").textContent = place.desc;
             document.getElementsByClassName("thumbnail")[0].children[0].src = place.thumb;
             document.getElementById("logo").src = place.icon;
-            document.getElementsByClassName("company-detail-card-data")[0].innerHTML = place["company-details"].valuation[0] + "<br>" + place["company-details"].valuation[1];
-            document.getElementsByClassName("company-detail-card-data")[1].textContent = place["company-details"].employees.toString().padStart(2, '0');
-            document.getElementsByClassName("company-detail-card-data")[2].textContent = place["company-details"].openings.toString().padStart(2, '0');
+            document.getElementsByClassName("company-detail-card-data")[0].innerHTML = place.valuation_amount + "<br>" + place.valuation_unit;
+            document.getElementsByClassName("company-detail-card-data")[1].textContent = place.employees.toString().padStart(2, '0');
+            document.getElementsByClassName("company-detail-card-data")[2].textContent = place.openings.toString().padStart(2, '0');
             const foundersContainer = document.getElementById("founders");
             foundersContainer.innerHTML = "";
             place.founders.forEach((founder) => {
@@ -119,9 +119,9 @@ function initializeMap() {
                     document.getElementById("description").textContent = place.desc;
                     document.getElementsByClassName("thumbnail")[0].children[0].src = place.thumb;
                     document.getElementById("logo").src = place.icon;
-                    document.getElementsByClassName("company-detail-card-data")[0].innerHTML = place["company-details"].valuation[0] + "<br>" + place["company-details"].valuation[1];
-                    document.getElementsByClassName("company-detail-card-data")[1].textContent = place["company-details"].employees.toString().padStart(2, '0');
-                    document.getElementsByClassName("company-detail-card-data")[2].textContent = place["company-details"].openings.toString().padStart(2, '0');
+                    document.getElementsByClassName("company-detail-card-data")[0].innerHTML = place.valuation_amount + "<br>" + place.valuation_unit;
+                    document.getElementsByClassName("company-detail-card-data")[1].textContent = place.employees.toString().padStart(2, '0');
+                    document.getElementsByClassName("company-detail-card-data")[2].textContent = place.openings.toString().padStart(2, '0');
                     const foundersContainer = document.getElementById("founders");
                     foundersContainer.innerHTML = "";
                     place.founders.forEach((founder) => {
@@ -276,7 +276,7 @@ function applyFilters() {
         }
         if (filterSizes.length > 0) {
             // Filter by employee size
-            const employeeCount = markers[i].details["company-details"].employees;
+            const employeeCount = markers[i].details.employees;
             let shouldShow = false;
 
             for (const size of filterSizes) {
@@ -306,7 +306,7 @@ function applyFilters() {
                 hideMarker(markers[i]);
             }
         }
-        if (filterOpenings && markers[i].details["company-details"].openings==0) {
+        if (filterOpenings && markers[i].details.openings==0) {
             hideMarker(markers[i]);
         }
     }
