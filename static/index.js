@@ -9,15 +9,9 @@ var Jawg_Dark = L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?a
 Jawg_Dark.addTo(map);
 var popup = L.popup();
 
-// Fetch companies data from JSON file
-let places = [];
-fetch('./static/companies.json')
-    .then(response => response.json())
-    .then(data => {
-        places = data;
-        initializeMap();
-    })
-    .catch(error => console.error('Error loading companies data:', error));
+// Use companies data from template
+let places = companiesData;
+initializeMap();
 
 var markers = [];
 function initializeMap() {

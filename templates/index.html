@@ -18,6 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./static/index.css">
+    <script>
+        // Pass the companies data from Flask to JavaScript
+        const companiesData = {{ companies|tojson|safe }};
+    </script>
 </head>
 
 <body>
