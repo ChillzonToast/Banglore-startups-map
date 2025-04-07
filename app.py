@@ -81,7 +81,7 @@ def create():
         new_company = Company(
             name=data.get('name'),
             latitude=data.get('latitude'),
-            longitude=data.get('longtitude'),
+            longitude=data.get('longitude'),
             icon=data.get('icon'),
             thumb=data.get('thumb'),
             linkedin=data.get('linkedin'),

@@ -18,7 +18,7 @@ function initializeMap() {
     var marker;
     var unselected = 1;
     places.forEach((place) => {
-        marker = L.marker([place.latitude, place.longtitude]).addTo(map);
+        marker = L.marker([place.latitude, place.longitude]).addTo(map);
         marker._icon.src = place.icon;
         marker._icon.style.borderRadius = "50%";
         marker._icon.style.border = "3px solid white"
@@ -76,7 +76,7 @@ function initializeMap() {
                 `;
                 foundersContainer.appendChild(founderDiv);
             });
-            map.setView([place["latitude"], place["longtitude"]], map.getZoom());
+            map.setView([place["latitude"], place["longitude"]], map.getZoom());
             document.getElementById("ext-links").children[0].href = place.linkedin;
             document.getElementById("ext-links").children[1].href = place.website;
 
@@ -154,7 +154,7 @@ function initializeMap() {
                         `;
                         foundersContainer.appendChild(founderDiv);
                     });
-                    map.setView([place["latitude"], place["longtitude"]], map.getZoom());
+                    map.setView([place["latitude"], place["longitude"]], map.getZoom());
                     document.getElementById("ext-links").children[0].href = place.linkedin;
                     document.getElementById("ext-links").children[1].href = place.website;
 
