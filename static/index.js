@@ -11,9 +11,8 @@ var popup = L.popup();
 
 // Use companies data from template
 let places = companiesData;
-initializeMap();
-
 var markers = [];
+
 function initializeMap() {
     var marker;
     var unselected = 1;
@@ -164,6 +163,8 @@ function initializeMap() {
         }
     })
 }
+
+initializeMap();
 
 document.getElementsByClassName("filter-btn")[0].addEventListener("click", () => {
     for (var i = 0; i < document.getElementById("filter").children.length; i++) {
