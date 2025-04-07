@@ -244,6 +244,15 @@ function clearFilters() {
     for (var i = 0; i < markers.length; i++) {
         showMarker(markers[i]);
     }
+    var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
+    for (var i = 0;i<btns.length;i++) {
+        btns[i].classList.remove('active')
+    }
+    var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
+    for (var i = 0;i<btns.length;i++) {
+        btns[i].classList.remove('active')
+    }
+    document.getElementsByClassName('form-check-input')[0].checked=false;
 }
 
 function applyFilters() {
