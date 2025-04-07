@@ -116,3 +116,16 @@ def create():
 def initdb():
     db.create_all()
     return "Initialized DB!"
+
+@app.route('/cleardb')
+def cleardb():
+    try:
+        # Delete all records from child table (Founder) first to maintain referential integrity
+        Founder.query.delete()
+        # Delete all records from parent table (Company)
+        Company.query.delete()
+        db.session.commit()
+        return "Database cleared successfully!"
+    except Exception as e:
+        db.session.rollback()
+        return f"Error clearing database: {str(e)}"

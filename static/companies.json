@@ -1,8 +1,8 @@
 [
     {
         "name": "MarketFeed",
-        "lattitude": 12.967509,
-        "longtitude": 77.574506,
+        "latitude": 12.967509,
+        "longitude": 77.574506,
         "icon": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/xtrxzyiktapbusenpmzf",
         "thumb": "https://media.glassdoor.com/l/57/15/3f/28/hq.jpg?signature=00e5d86551169694e4eefdb41592b7d6b2e0ffa379ec1f5de02fb28c29bf6d5c",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
@@ -18,8 +18,8 @@
     },
     {
         "name": "NITC",
-        "lattitude": 12.964459,
-        "longtitude": 77.576866,
+        "latitude": 12.964459,
+        "longitude": 77.576866,
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
         "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
@@ -35,8 +35,8 @@
     },
     {
         "name": "NITC",
-        "lattitude": 12.968992,
-        "longtitude": 77.578304,
+        "latitude": 12.968992,
+        "longitude": 77.578304,
         "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppk0mv8hS0LgX61sUK5-6gCbBJ8ooX3Azeg&s",
         "thumb": "https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis",
         "linkedin": "https://www.linkedin.com/company/marketfeed/",
