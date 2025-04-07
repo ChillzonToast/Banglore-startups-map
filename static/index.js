@@ -11,7 +11,7 @@ var popup = L.popup();
 
 // Fetch companies data from JSON file
 let places = [];
-fetch('companies.json')
+fetch('./static/companies.json')
     .then(response => response.json())
     .then(data => {
         places = data;
@@ -240,23 +240,25 @@ function showMarker(marker) {
     marker._shadow.classList.remove("marker-hide");
 }
 
-function clearFilters() {
+function clearFilters(toggle) {
     for (var i = 0; i < markers.length; i++) {
         showMarker(markers[i]);
     }
-    var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
-    for (var i = 0;i<btns.length;i++) {
-        btns[i].classList.remove('active')
+    if (toggle == undefined) {
+        var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
+        for (var i = 0;i<btns.length;i++) {
+            btns[i].classList.remove('active')
+        }
+        var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
+        for (var i = 0;i<btns.length;i++) {
+            btns[i].classList.remove('active')
+        }
+        document.getElementsByClassName('form-check-input')[0].checked=false;
     }
-    var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
-    for (var i = 0;i<btns.length;i++) {
-        btns[i].classList.remove('active')
-    }
-    document.getElementsByClassName('form-check-input')[0].checked=false;
 }
 
 function applyFilters() {
-    clearFilters();
+    clearFilters(0);
 
     var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
     var filterCategories = [];

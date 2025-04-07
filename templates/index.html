@@ -11,13 +11,13 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="./leaflet.edgebuffer.js"></script>
+    <script src="./static/leaflet.edgebuffer.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./static/index.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
             <div class="gradient" style="border-radius: 12px;"></div>
             <div id="logo-brand" class="d-flex flex-row justify-content-between mx-3">
-                <img class="me-3" id="logo" src="./curefit.png" alt="">
+                <img class="me-3" id="logo" src="./static/curefit.png" alt="">
                 <div>
                     <h1 id="name">CureFit HQ Office</h1>
                     <p id="company">Revolutionizing fintech solutions for small businesses.</p>
@@ -245,7 +245,7 @@
                     <span style="color: #8C8C8C;">Show only companies that have <strong style="color: #F5F5F5;">opening</strong></span>
                 </div>
                 
-                <button class="apply-button btn mt-3" onclick="applyFilters()">Apply filter</button>
+                <button class="apply-button btn mt-3" onclick="applyFilters(1)">Apply filter</button>
             </div>
         </div>
     </div>
@@ -256,6 +256,6 @@
         
     </div>
 </body>
-<script src="./index.js"></script>
+<script src="./static/index.js"></script>
 
 </html>
