@@ -389,6 +389,45 @@ h2 {
     pointer-events: none;
 }
 
+#welcome-popup {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 50px;
+    color: #8C8C8C;
+    opacity: 100%;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+
+#welcome-popup > div {
+    display: flex;
+    align-items:start;
+    gap: 10px;
+    max-width: 500px;
+    background-color: var(--ui-background);
+    border-radius: 8px;
+}
+
+.welcome-popup-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8C8C8C;
+}
+
+.welcome-popup-title-bold {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.welcome-popup-desc {
+    font-size: 14px;
+    color: #737373;
+}
+
 .popup-hidden {
     opacity: 0% !important;
 }   

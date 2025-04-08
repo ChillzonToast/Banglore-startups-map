@@ -312,3 +312,7 @@ function applyFilters() {
         }
     }
 }
+
+function closeWelcomePopup() {
+    document.getElementById("welcome-popup").classList.add("popup-hidden");
+}
