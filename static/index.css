@@ -435,3 +435,8 @@ h2 {
 .marker-hide {
     display: none !important;
 }
+
+span::selection {
+    color: #181718;
+    background-color: white;
+}
