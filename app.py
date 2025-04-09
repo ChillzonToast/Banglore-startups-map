@@ -74,6 +74,10 @@ def index():
     companies_json = [company.to_dict() for company in companies]
     return render_template('index.html', companies=companies_json)
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @app.route('/create', methods=['POST'])
 def create():
     try:

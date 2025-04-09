@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #181718;
+    font-family: "Geist", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 500;
+}
+
+#header {
+    margin-top: 10vh;
+    font-size: 24px;
+}
+
+.main-content {
+    margin-top: 15vh;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#get-started-button {
+    background-color: white;
+    border-radius: 4px;
+}
