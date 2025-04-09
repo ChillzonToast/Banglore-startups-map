@@ -315,4 +315,7 @@ function applyFilters() {
 
 function closeWelcomePopup() {
     document.getElementById("welcome-popup").classList.add("popup-hidden");
+    setTimeout(() => {
+        document.getElementById("welcome-popup").remove();
+    }, 3000);
 }
