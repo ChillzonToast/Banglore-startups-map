@@ -1,9 +1,7 @@
 var map = L.map('map').setView([12.965838, 77.578926], 15);
-var Jawg_Dark = L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+var Jawg_Dark = L.maplibreGL({
+    style: 'https://api.jawg.io/styles/jawg-dark.json?access-token=UqyfdxME4ffAN7Cl8TnzU7twAIF5Luz197VpgiJwZRhPVVS2EDdIPyMvXeO36w9P',
     attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    minZoom: 0,
-    maxZoom: 22,
-    accessToken: 'UqyfdxME4ffAN7Cl8TnzU7twAIF5Luz197VpgiJwZRhPVVS2EDdIPyMvXeO36w9P',
     edgeBufferTiles: 1
 });
 Jawg_Dark.addTo(map);
