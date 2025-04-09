@@ -201,6 +201,9 @@ function locateUser() {
 }
 
 map.setMaxBounds(map.getBounds());
+map.setMinZoom(12);
+map.setZoom(12);
+map.setMaxZoom(17);
 document.getElementById("locate").addEventListener("click", (e) => {
     if (map.getBounds().contains([lat, long])) {
         locateUser();
