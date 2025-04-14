@@ -31,3 +31,52 @@ span::selection {
     color: #181718;
     background-color: white;
 }
+
+.description {
+    color: #8C8C8C;
+    font-size: 18px;
+}
+
+.welcome-text {
+    color: #8C8C8C;
+    font-size: 32px;
+}
+
+.title-text {
+    font-size: 64px; 
+    color: white; 
+    line-height: 75px; 
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    #header {
+        display: none !important; 
+    }
+    .main-content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .description {
+        font-size: 18px;
+    }
+    .welcome-text {
+        font-size: 20px;
+    }
+    .title-text {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    #logo {
+        margin-right: 10px !important;
+    }
+    .main-content {
+        margin-top: 23vh;
+    }
+    #get-started-button {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+        padding: 0px !important;
+    }
+}
