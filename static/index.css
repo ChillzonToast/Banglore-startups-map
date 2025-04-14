@@ -130,7 +130,7 @@ hr {
 }
 
 h2 {
-    color: white;
+    color: #A3A3A3;
     font-size: 16px;
 }
 
@@ -278,8 +278,7 @@ h2 {
 #filter {
     max-width: 120px;
     max-height: 44px;
-    width: 100vh;
-    height: 100vh;
+    padding: 10px 20px;
     border-radius: 6px;
     background-color: var(--ui-background);
     color: white;
@@ -439,4 +438,151 @@ h2 {
 span::selection {
     color: #181718;
     background-color: white;
+}
+#info-drawer {
+    display: none;
+}
+@media (max-width: 768px) {
+    #filter {
+        padding: 0px;
+        width: 44px;
+        height: 44px;
+        margin-top: -20px !important;
+    }
+    #filter p {
+        display: none !important;
+    }
+    #locate {
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+    }
+    #locate-filter {
+        margin-right: 0 !important;
+    }
+    #welcome-popup {
+        top: 90px;
+        bottom: auto;
+    }
+    #welcome-popup > div {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    #info {
+        position: fixed;
+        top:3vh;
+        width: 85%;
+        background-color: transparent;
+        margin-top: -20px;
+    }
+    #info > * {
+        display: none !important;
+    }
+    #searchbar {
+        display: flex !important;
+        height: 44px;
+        background-color: var(--ui-background) !important;
+        margin-left: 0 !important;
+    }
+    body {
+        overflow: hidden;
+    }
+    .leaflet-marker-icon {
+        width: 30px !important;
+        height: 30px !important;
+        border: 2px solid white !important;
+    }
+    #info-drawer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        position: fixed;
+        bottom: 0px;
+        background-color: var(--ui-background);
+        border-radius: 24px 24px 0 0;
+        min-height: 20px;
+    }
+    .info-drawer-br {
+        margin-top: 7px;
+        width: 64px;
+        height: 4px;
+        background-color: #535252;
+    }
+    #drawer-logo {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    #drawer-name {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 2px;
+    }
+    
+    #drawer-company {
+        font-size: 16px;
+        color: #8C8C8C;
+        margin-bottom: 4px;
+    }
+    
+    #drawer-description {
+        font-size: 14px;
+        color: #8C8C8C;
+    }
+    #drawer-view-details {
+        font-size: 12px;
+        color: #B3B3B3;
+    }
+    #drawer-ext-links > a {
+        flex:1;
+    }
+    
+    #drawer-ext-links > a > div {
+        background-color: #272625;
+        color: #F5F5F5;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        align-items: center ;
+        font-size: 14px;
+        border: 1px solid #535252 !important;
+    }
+    
+    #drawer-logo-brand {
+        position: absolute;
+        bottom: 1%;
+    }
+    .thumbnail {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        width: 90%;
+    }
+    .thumbnail img {
+        max-height: 150px !important;
+    }
+    #drawer-ext-links {
+        width: 100%;
+        padding: 0 16px !important;
+      }
+    #drawer-ext-links div {
+        width: 100%;
+    }
+    #drawer-ext-links p {
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
+    #drawer-details {
+        max-height: 35vh;
+    }
+    .company-detail-card-data  {
+        margin-bottom: -4px !important;
+    }
+    #drawer-companyDetails, #drawer-founders {
+        margin-top: 20px !important;
+    }
 }

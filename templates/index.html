@@ -25,7 +25,7 @@
 
     <script>
         // Pass the companies data from Flask to JavaScript
-        const companiesData = {{ companies|tojson|safe }};
+        const companiesData = {{ companies| tojson | safe }};
     </script>
 </head>
 
@@ -206,7 +206,7 @@
         <div id="filter" class="d-flex justify-content-center align-items-center">
             <div class="d-flex justify-content-center align-items-center filter-btn">
                 <p class="m-0 mx-2">Filters</p>
-                <svg  width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M0.75 0.75C0.75 0.335786 1.08579 0 1.5 0H12.5C12.9142 0 13.25 0.335786 13.25 0.75C13.25 1.16421 12.9142 1.5 12.5 1.5H1.5C1.08579 1.5 0.75 1.16421 0.75 0.75ZM2.75 4.75C2.75 4.33579 3.08579 4 3.5 4H10.5C10.9142 4 11.25 4.33579 11.25 4.75C11.25 5.16421 10.9142 5.5 10.5 5.5H3.5C3.08579 5.5 2.75 5.16421 2.75 4.75ZM4.75 8.75C4.75 8.33579 5.08579 8 5.5 8H8.5C8.91421 8 9.25 8.33579 9.25 8.75C9.25 9.16421 8.91421 9.5 8.5 9.5H5.5C5.08579 9.5 4.75 9.16421 4.75 8.75Z"
                         fill="#F2F1F1" />
@@ -215,15 +215,17 @@
             <div id="filter-content" class="filter-container filter-toggle-hide">
                 <div class="filter-header mt-2">
                     <div id="filter-back-btn" class="d-flex align-items-center">
-                        <svg  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7803 3.96967C12.0732 4.26256 12.0732 4.73744 11.7803 5.03033L7.81066 9L11.7803 12.9697C12.0732 13.2626 12.0732 13.7374 11.7803 14.0303C11.4874 14.3232 11.0126 14.3232 10.7197 14.0303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967L10.7197 3.96967C11.0126 3.67678 11.4874 3.67678 11.7803 3.96967Z" fill="#D5D4D4"/>
-                            </svg>
-                            
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.7803 3.96967C12.0732 4.26256 12.0732 4.73744 11.7803 5.03033L7.81066 9L11.7803 12.9697C12.0732 13.2626 12.0732 13.7374 11.7803 14.0303C11.4874 14.3232 11.0126 14.3232 10.7197 14.0303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967L10.7197 3.96967C11.0126 3.67678 11.4874 3.67678 11.7803 3.96967Z"
+                                fill="#D5D4D4" />
+                        </svg>
+
                         <span class="fw-medium" style="font-size: 18px;">Filter</span>
                     </div>
                     <a href="#" onclick="clearFilters()">Clear filter</a>
                 </div>
-        
+
                 <div class="mt-3">
                     <p class="mb-3">Startup category</p>
                     <div class="filter-options d-flex flex-wrap gap-2">
@@ -235,7 +237,7 @@
                         <button class="btn btn-sm">Healthcare</button>
                     </div>
                 </div>
-        
+
                 <div class="mt-3">
                     <p class="mb-3">Startup size</p>
                     <div class="filter-options d-flex flex-wrap gap-2">
@@ -246,14 +248,15 @@
                         <button class="btn btn-sm">250+</button>
                     </div>
                 </div>
-        
+
                 <div class="toggle-container mt-3">
                     <div class="form-check form-switch form-switch-secondary">
                         <input class="form-check-input" type="checkbox">
                     </div>
-                    <span style="color: #8C8C8C;">Show only companies that have <strong style="color: #F5F5F5;">opening</strong></span>
+                    <span style="color: #8C8C8C;">Show only companies that have <strong
+                            style="color: #F5F5F5;">opening</strong></span>
                 </div>
-                
+
                 <button class="apply-button btn mt-3" onclick="applyFilters(1)">Apply filter</button>
             </div>
         </div>
@@ -262,22 +265,177 @@
         <div class="p-4">
             <span>Your current location is not in Bangalore!</span>
         </div>
-        
+
     </div>
     <div id="welcome-popup" class="">
-        <div class="p-4 py-3">
+        <div class="mx-2 p-4 py-3">
             <span style="font-size: 20px;">👋🏻</span>
-                
+
             <div id="welcome-popup-content" class="d-flex flex-column gap-2">
-                <span class="welcome-popup-title">Welcome to <span class="welcome-popup-title-bold">Friendly Neighborhood Startups</span></span>
-                <span class="welcome-popup-desc">You can click/hover on the pins. Lorem ipsum dolor sit amet consectetur. Cras libero sagitt.</span>
+                <span class="welcome-popup-title">Welcome to <span class="welcome-popup-title-bold">Friendly
+                        Neighborhood Startups</span></span>
+                <span class="welcome-popup-desc">You can click/hover on the pins. Lorem ipsum dolor sit amet
+                    consectetur. Cras libero sagitt.</span>
             </div>
 
-            <svg onclick="closeWelcomePopup()" width="30" height="30" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0303 3.96967C14.3232 4.26256 14.3232 4.73744 14.0303 5.03033L5.03033 14.0303C4.73744 14.3232 4.26256 14.3232 3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697L12.9697 3.96967C13.2626 3.67678 13.7374 3.67678 14.0303 3.96967Z" fill="#8E8E8E"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 3.96967C4.26256 3.67678 4.73744 3.67678 5.03033 3.96967L14.0303 12.9697C14.3232 13.2626 14.3232 13.7374 14.0303 14.0303C13.7374 14.3232 13.2626 14.3232 12.9697 14.0303L3.96967 5.03033C3.67678 4.73744 3.67678 4.26256 3.96967 3.96967Z" fill="#8E8E8E"/>
-                </svg>
-                
+            <svg onclick="closeWelcomePopup()" width="30" height="30" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.0303 3.96967C14.3232 4.26256 14.3232 4.73744 14.0303 5.03033L5.03033 14.0303C4.73744 14.3232 4.26256 14.3232 3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697L12.9697 3.96967C13.2626 3.67678 13.7374 3.67678 14.0303 3.96967Z"
+                    fill="#8E8E8E" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.96967 3.96967C4.26256 3.67678 4.73744 3.67678 5.03033 3.96967L14.0303 12.9697C14.3232 13.2626 14.3232 13.7374 14.0303 14.0303C13.7374 14.3232 13.2626 14.3232 12.9697 14.0303L3.96967 5.03033C3.67678 4.73744 3.67678 4.26256 3.96967 3.96967Z"
+                    fill="#8E8E8E" />
+            </svg>
+
+        </div>
+    </div>
+    <div id="info-drawer">
+        <div class="info-drawer-br">
+        </div>
+        <div class="m-3 thumbnail unselected">
+            <img
+                src="https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis" />
+
+
+            <div class="gradient" style="border-radius: 12px;"></div>
+            <div id="drawer-logo-brand" class="d-flex flex-row justify-content-between mx-3">
+                <img class="me-3" id="drawer-logo" src="./static/curefit.png" alt="">
+                <div>
+                    <h1 id="drawer-name">CureFit HQ Office</h1>
+                    <p id="drawer-company">Revolutionizing fintech solutions for small businesses.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="drawer-details" class="unselected" style="overflow-y: scroll;">
+
+            <p id="drawer-description" class="mx-3 ">
+                Lorem ipsum dolor sit amet consectetur. Fringilla dolor nunc volutpat amet ac porttitor mauris neque.
+                Nec
+                ultrices proin lobortis viverra leo odio urna.
+            </p>
+
+            <h2 class="mx-3 ">
+                Founders
+            </h2>
+
+            <div id="drawer-founders" class="">
+                <div class="mx-3 mb-2 d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-row ">
+                        <img class="me-2 founder-logo"
+                            src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
+                            alt="">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h1 class="founder-name">Priya Sharma</h1>
+                            <p class="founder-role m-0">CEO</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_14_302)">
+                                <path
+                                    d="M19.2727 2H4.72727C4.00396 2 3.31026 2.28734 2.7988 2.7988C2.28734 3.31026 2 4.00396 2 4.72727L2 19.2727C2 19.996 2.28734 20.6897 2.7988 21.2012C3.31026 21.7127 4.00396 22 4.72727 22H19.2727C19.996 22 20.6897 21.7127 21.2012 21.2012C21.7127 20.6897 22 19.996 22 19.2727V4.72727C22 4.00396 21.7127 3.31026 21.2012 2.7988C20.6897 2.28734 19.996 2 19.2727 2ZM8.81818 17.8273C8.81833 17.8827 8.80754 17.9377 8.78642 17.989C8.7653 18.0402 8.73427 18.0868 8.6951 18.1261C8.65594 18.1654 8.60941 18.1965 8.55819 18.2178C8.50697 18.2391 8.45205 18.25 8.39659 18.25H6.6C6.54444 18.2502 6.48941 18.2393 6.43805 18.2181C6.3867 18.1969 6.34004 18.1658 6.30075 18.1265C6.26147 18.0872 6.23034 18.0406 6.20915 17.9892C6.18795 17.9379 6.17712 17.8828 6.17727 17.8273V10.2955C6.17727 10.1833 6.22181 10.0758 6.30109 9.99654C6.38036 9.91726 6.48789 9.87273 6.6 9.87273H8.39659C8.50851 9.87303 8.61574 9.9177 8.69477 9.99694C8.7738 10.0762 8.81818 10.1835 8.81818 10.2955V17.8273ZM7.49773 9.15909C7.1606 9.15909 6.83104 9.05912 6.55073 8.87182C6.27042 8.68453 6.05195 8.41831 5.92293 8.10685C5.79392 7.79538 5.76016 7.45265 5.82593 7.12201C5.8917 6.79136 6.05405 6.48763 6.29243 6.24925C6.53082 6.01086 6.83454 5.84852 7.16519 5.78275C7.49584 5.71698 7.83856 5.75074 8.15003 5.87975C8.46149 6.00876 8.72771 6.22724 8.91501 6.50755C9.1023 6.78786 9.20227 7.11742 9.20227 7.45455C9.20227 7.90662 9.02269 8.34018 8.70302 8.65984C8.38336 8.97951 7.9498 9.15909 7.49773 9.15909ZM18.2091 17.8568C18.2092 17.9079 18.1993 17.9585 18.1798 18.0057C18.1603 18.0529 18.1317 18.0958 18.0956 18.132C18.0595 18.1681 18.0166 18.1967 17.9694 18.2162C17.9221 18.2357 17.8715 18.2456 17.8205 18.2455H15.8886C15.8376 18.2456 15.787 18.2357 15.7397 18.2162C15.6925 18.1967 15.6496 18.1681 15.6135 18.132C15.5774 18.0958 15.5488 18.0529 15.5293 18.0057C15.5098 17.9585 15.4999 17.9079 15.5 17.8568V14.3284C15.5 13.8011 15.6545 12.0193 14.1216 12.0193C12.9341 12.0193 12.692 13.2386 12.6443 13.7864V17.8614C12.6443 17.9635 12.6042 18.0615 12.5325 18.1342C12.4608 18.2069 12.3634 18.2485 12.2614 18.25H10.3955C10.3445 18.25 10.294 18.2399 10.2469 18.2204C10.1998 18.2008 10.157 18.1722 10.121 18.1361C10.0851 18.1 10.0565 18.0571 10.0371 18.01C10.0177 17.9629 10.0078 17.9123 10.008 17.8614V10.2625C10.0078 10.2115 10.0177 10.161 10.0371 10.1139C10.0565 10.0667 10.0851 10.0239 10.121 9.98776C10.157 9.95166 10.1998 9.92301 10.2469 9.90347C10.294 9.88392 10.3445 9.87386 10.3955 9.87386H12.2614C12.3644 9.87386 12.4633 9.91481 12.5362 9.98769C12.6091 10.0606 12.65 10.1594 12.65 10.2625V10.9193C13.0909 10.2568 13.7443 9.74773 15.1386 9.74773C18.2273 9.74773 18.2068 12.6318 18.2068 14.2159L18.2091 17.8568Z"
+                                    fill="#CFF5C4" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_14_302">
+                                    <rect width="20" height="20" fill="white" transform="translate(2 2)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mx-3 mb-2 d-flex flex-row justify-content-between ">
+                    <div class="d-flex flex-row ">
+                        <img class="me-2 founder-logo"
+                            src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
+                            alt="">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h1 class="founder-name">Priya Sharma</h1>
+                            <p class="founder-role m-0">CEO</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_14_302)">
+                                <path
+                                    d="M19.2727 2H4.72727C4.00396 2 3.31026 2.28734 2.7988 2.7988C2.28734 3.31026 2 4.00396 2 4.72727L2 19.2727C2 19.996 2.28734 20.6897 2.7988 21.2012C3.31026 21.7127 4.00396 22 4.72727 22H19.2727C19.996 22 20.6897 21.7127 21.2012 21.2012C21.7127 20.6897 22 19.996 22 19.2727V4.72727C22 4.00396 21.7127 3.31026 21.2012 2.7988C20.6897 2.28734 19.996 2 19.2727 2ZM8.81818 17.8273C8.81833 17.8827 8.80754 17.9377 8.78642 17.989C8.7653 18.0402 8.73427 18.0868 8.6951 18.1261C8.65594 18.1654 8.60941 18.1965 8.55819 18.2178C8.50697 18.2391 8.45205 18.25 8.39659 18.25H6.6C6.54444 18.2502 6.48941 18.2393 6.43805 18.2181C6.3867 18.1969 6.34004 18.1658 6.30075 18.1265C6.26147 18.0872 6.23034 18.0406 6.20915 17.9892C6.18795 17.9379 6.17712 17.8828 6.17727 17.8273V10.2955C6.17727 10.1833 6.22181 10.0758 6.30109 9.99654C6.38036 9.91726 6.48789 9.87273 6.6 9.87273H8.39659C8.50851 9.87303 8.61574 9.9177 8.69477 9.99694C8.7738 10.0762 8.81818 10.1835 8.81818 10.2955V17.8273ZM7.49773 9.15909C7.1606 9.15909 6.83104 9.05912 6.55073 8.87182C6.27042 8.68453 6.05195 8.41831 5.92293 8.10685C5.79392 7.79538 5.76016 7.45265 5.82593 7.12201C5.8917 6.79136 6.05405 6.48763 6.29243 6.24925C6.53082 6.01086 6.83454 5.84852 7.16519 5.78275C7.49584 5.71698 7.83856 5.75074 8.15003 5.87975C8.46149 6.00876 8.72771 6.22724 8.91501 6.50755C9.1023 6.78786 9.20227 7.11742 9.20227 7.45455C9.20227 7.90662 9.02269 8.34018 8.70302 8.65984C8.38336 8.97951 7.9498 9.15909 7.49773 9.15909ZM18.2091 17.8568C18.2092 17.9079 18.1993 17.9585 18.1798 18.0057C18.1603 18.0529 18.1317 18.0958 18.0956 18.132C18.0595 18.1681 18.0166 18.1967 17.9694 18.2162C17.9221 18.2357 17.8715 18.2456 17.8205 18.2455H15.8886C15.8376 18.2456 15.787 18.2357 15.7397 18.2162C15.6925 18.1967 15.6496 18.1681 15.6135 18.132C15.5774 18.0958 15.5488 18.0529 15.5293 18.0057C15.5098 17.9585 15.4999 17.9079 15.5 17.8568V14.3284C15.5 13.8011 15.6545 12.0193 14.1216 12.0193C12.9341 12.0193 12.692 13.2386 12.6443 13.7864V17.8614C12.6443 17.9635 12.6042 18.0615 12.5325 18.1342C12.4608 18.2069 12.3634 18.2485 12.2614 18.25H10.3955C10.3445 18.25 10.294 18.2399 10.2469 18.2204C10.1998 18.2008 10.157 18.1722 10.121 18.1361C10.0851 18.1 10.0565 18.0571 10.0371 18.01C10.0177 17.9629 10.0078 17.9123 10.008 17.8614V10.2625C10.0078 10.2115 10.0177 10.161 10.0371 10.1139C10.0565 10.0667 10.0851 10.0239 10.121 9.98776C10.157 9.95166 10.1998 9.92301 10.2469 9.90347C10.294 9.88392 10.3445 9.87386 10.3955 9.87386H12.2614C12.3644 9.87386 12.4633 9.91481 12.5362 9.98769C12.6091 10.0606 12.65 10.1594 12.65 10.2625V10.9193C13.0909 10.2568 13.7443 9.74773 15.1386 9.74773C18.2273 9.74773 18.2068 12.6318 18.2068 14.2159L18.2091 17.8568Z"
+                                    fill="#CFF5C4" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_14_302">
+                                    <rect width="20" height="20" fill="white" transform="translate(2 2)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <h2 class="mx-3 ">
+                Company Details
+            </h2>
+
+            <div id="drawer-companyDetails" class="">
+                <div class="mx-3 d-flex flex-row justify-content-between align-items-center gap-2">
+                    <div class="company-detail-card">
+                        <div>
+                            <p class="company-detail-card-data m-0 mx-2 mb-2 ">$1.47<br>billion</p>
+                            <p class="company-detail-card-category m-0 mx-2 mb-2">Valuation</p>
+                        </div>
+                    </div>
+                    <div class="company-detail-card">
+                        <div>
+                            <p class="company-detail-card-data m-0 mx-2 mb-2 ">77</p>
+                            <p class="company-detail-card-category m-0 mx-2 mb-2">Employees</p>
+                        </div>
+                    </div>
+                    <div class="company-detail-card">
+                        <div>
+                            <p class="company-detail-card-data m-0 mx-2 mb-2 ">03</p>
+                            <p class="company-detail-card-category m-0 mx-2 mb-2">Openings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="drawer-ext-links" class="d-flex justify-content-center m-3 gap-2 unselected">
+            <a href="" class="">
+                <div class="p-2 me-3">
+                    <p class="m-0 mx-3">Linkedin</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.98828 11.9553L11.8455 4.09814" stroke="#F2F1F1" stroke-width="1.21922"
+                            stroke-linecap="round" />
+                        <path d="M11.8472 10.98V4.09814H5.01953" stroke="#F2F1F1" stroke-width="1.21922"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </a>
+            <a href="" class="">
+                <div class="p-2">
+                    <p class="m-0 mx-3">Visit Website</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.98828 11.9553L11.8455 4.09814" stroke="#F2F1F1" stroke-width="1.21922"
+                            stroke-linecap="round" />
+                        <path d="M11.8472 10.98V4.09814H5.01953" stroke="#F2F1F1" stroke-width="1.21922"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div id="drawer-view-details" class="d-flex justify-content-center my-1 unselected">
+            <p class="me-2">Return to Map</p>
+            <svg class="view-details-svg" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.08882 4.83882C3.31663 4.61102 3.68598 4.61102 3.91378 4.83882L7.0013 7.92634L10.0888 4.83882C10.3166 4.61102 10.686 4.61102 10.9138 4.83882C11.1416 5.06663 11.1416 5.43598 10.9138 5.66378L7.41378 9.16378C7.18598 9.39159 6.81663 9.39159 6.58882 9.16378L3.08882 5.66378C2.86102 5.43598 2.86102 5.06663 3.08882 4.83882Z"
+                    fill="#B3B3B3" />
+            </svg>
+
         </div>
     </div>
 </body>
