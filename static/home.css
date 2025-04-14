@@ -69,6 +69,10 @@ span::selection {
     }
     #logo {
         margin-right: 10px !important;
+        height: 80px !important;
+        width: 80px !important;
+        min-height: 80px !important;
+        min-width: 80px !important;
     }
     .main-content {
         margin-top: 23vh;
