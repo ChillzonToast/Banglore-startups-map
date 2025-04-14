@@ -62,6 +62,7 @@ span::selection {
     }
     .welcome-text {
         font-size: 20px;
+        margin-bottom: 5px !important;
     }
     .title-text {
         font-size: 32px;
@@ -75,7 +76,7 @@ span::selection {
         min-width: 80px !important;
     }
     .main-content {
-        margin-top: 23vh;
+        margin-top: 18vh;
     }
     #get-started-button {
         width: 180px;
