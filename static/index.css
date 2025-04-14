@@ -585,4 +585,7 @@ span::selection {
     #drawer-companyDetails, #drawer-founders {
         margin-top: 20px !important;
     }
+    .leaflet-popup {
+        display: none;
+    }
 }
