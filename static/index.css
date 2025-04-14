@@ -455,7 +455,7 @@ span::selection {
     #locate {
         position: fixed;
         bottom: 50px;
-        right: 30px;
+        right: 10px;
     }
     #locate-filter {
         margin-right: 0 !important;
