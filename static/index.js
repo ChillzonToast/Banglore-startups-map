@@ -263,6 +263,7 @@ document.getElementsByClassName("filter-btn")[0].addEventListener("click", () =>
         document.getElementById("filter").children[i].classList.toggle("filter-toggle-hide");
     };
     document.getElementById("filter").classList.toggle("filter-content-active");
+    document.getElementById("drawer-filter-content").classList.toggle("filter-toggle-hide");
 });
 
 
@@ -271,6 +272,11 @@ document.getElementById("filter-back-btn").addEventListener("click", () => {
         document.getElementById("filter").children[i].classList.toggle("filter-toggle-hide");
     };
     document.getElementById("filter").classList.toggle("filter-content-active");
+});
+
+document.getElementById("drawer-filter-back-btn").addEventListener("click", () => {
+    document.getElementsByClassName("filter-btn")[0].classList.toggle("filter-toggle-hide");
+    document.getElementById("drawer-filter-content").classList.toggle("filter-toggle-hide");
 });
 
 var curLocIcon = L.icon({
@@ -312,19 +318,16 @@ document.getElementById("locate").addEventListener("click", (e) => {
         }, 3000);
     }
 });
-btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn")
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", (event) => {
-        event.currentTarget.classList.toggle("active");
-    });
+
+for (var i = 0; i < document.getElementsByClassName("filter-options").length; i++) {
+    btns = document.getElementsByClassName("filter-options")[i].getElementsByClassName("btn")
+    for (var j = 0; j < btns.length; j++) {
+        btns[j].addEventListener("click", (event) => {
+            event.currentTarget.classList.toggle("active");
+        });
+    }
 }
 
-btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn")
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", (event) => {
-        event.currentTarget.classList.toggle("active");
-    });
-}
 
 function hideMarker(marker) {
     marker._icon.classList.add("marker-hide");
@@ -341,36 +344,47 @@ function clearFilters(toggle) {
         showMarker(markers[i]);
     }
     if (toggle == undefined) {
-        var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
-        for (var i = 0;i<btns.length;i++) {
-            btns[i].classList.remove('active')
-        }
-        var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
-        for (var i = 0;i<btns.length;i++) {
-            btns[i].classList.remove('active')
+        for (var i = 0; i < document.getElementsByClassName("filter-options").length; i++) {
+            var btns = document.getElementsByClassName("filter-options")[i].getElementsByClassName("btn");
+            for (var j = 0;j<btns.length;j++) {
+                btns[j].classList.remove('active')
+            }
         }
         document.getElementsByClassName('form-check-input')[0].checked=false;
+        document.getElementsByClassName('form-check-input')[1].checked=false;
     }
 }
 
-function applyFilters() {
+function applyFilters(text) {
     clearFilters(0);
 
-    var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
+    if (text == "drawer") {
+        var btns = document.getElementsByClassName("filter-options")[2].getElementsByClassName("btn");
+    } else {
+        var btns = document.getElementsByClassName("filter-options")[0].getElementsByClassName("btn");
+    }
     var filterCategories = [];
     for (var i = 0; i < btns.length; i++) {
         if (btns[i].classList.contains("active")) {
             filterCategories.push(btns[i].textContent);
         }
     }
-    var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
+    if (text == "drawer") {
+        var btns = document.getElementsByClassName("filter-options")[3].getElementsByClassName("btn");
+    } else {
+        var btns = document.getElementsByClassName("filter-options")[1].getElementsByClassName("btn");
+    }
     var filterSizes = [];
     for (var i = 0; i < btns.length; i++) {
         if (btns[i].classList.contains("active")) {
             filterSizes.push(btns[i].textContent);
         }
     }
-    var filterOpenings = document.getElementsByClassName('form-check-input')[0].checked;
+    if (text == "drawer") {
+        var filterOpenings = document.getElementsByClassName('form-check-input')[1].checked;
+    } else {
+        var filterOpenings = document.getElementsByClassName('form-check-input')[0].checked;
+    }
     for (var i = 0; i < markers.length; i++) {
         if (!filterCategories.includes(markers[i].details.category) && filterCategories.length > 0) {
             hideMarker(markers[i]);
@@ -413,6 +427,7 @@ function applyFilters() {
         }
     }
 }
+
 
 function closeWelcomePopup() {
     document.getElementById("welcome-popup").classList.add("popup-hidden");

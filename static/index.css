@@ -266,6 +266,7 @@ h2 {
     position: fixed;
     top: 3vh;
     right: 10px;
+    z-index: 1001;
 }
 
 #locate {
@@ -441,6 +442,7 @@ span::selection {
 }
 #info-drawer {
     display: none;
+    z-index: 1002;
 }
 @media (max-width: 768px) {
     #filter {
@@ -587,5 +589,18 @@ span::selection {
     }
     .leaflet-popup {
         display: none;
+    }
+
+    #filter-content {
+        display: none !important;
+    }
+
+    #drawer-filter-content {
+        color: white;
+        padding: 10px;
+    }
+
+    .filter-btn {
+        display: flex !important;
     }
 }
