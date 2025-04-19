@@ -137,7 +137,7 @@ h2 {
 .founder-logo {
     width: 15%;
     height: fit-content;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 .founder-name {
@@ -598,6 +598,7 @@ span::selection {
     #drawer-filter-content {
         color: white;
         padding: 10px;
+        width: auto !important;
     }
 
     .filter-btn {

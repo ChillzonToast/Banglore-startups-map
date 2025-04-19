@@ -31,7 +31,11 @@ function initializeMap() {
                     document.getElementById("info").children[i].classList.remove("unselected");
                 }
                 for (var i = 1; i < document.getElementById("info-drawer").children.length; i++) {
-                    document.getElementById("info-drawer").children[i].classList.remove("unselected");
+                    if (document.getElementById("info-drawer").children[i].id == "drawer-filter-content") {
+                        i++;
+                    } else {
+                        document.getElementById("info-drawer").children[i].classList.remove("unselected");
+                    }
                 }
                 unselected = 0;
             }
@@ -142,7 +146,11 @@ function initializeMap() {
     })
     document.getElementById("drawer-view-details").addEventListener("click", () => {
         for (var i = 1; i < document.getElementById("info-drawer").children.length; i++) {
-            document.getElementById("info-drawer").children[i].classList.add("unselected");
+            if (document.getElementById("info-drawer").children[i].id == "drawer-filter-content") {
+                i++;
+            } else {
+                document.getElementById("info-drawer").children[i].classList.add("unselected");
+            }
         }
         unselected = 1;
     })
