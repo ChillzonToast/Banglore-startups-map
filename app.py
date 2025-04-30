@@ -21,6 +21,7 @@ class Company(db.Model):
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
     icon = db.Column(db.String(500))
+    color = db.Column(db.String(500))
     thumb = db.Column(db.String(500))
     linkedin = db.Column(db.String(200))
     website = db.Column(db.String(200))
@@ -39,6 +40,7 @@ class Company(db.Model):
             'latitude': self.latitude,
             'longitude': self.longitude,
             'icon': self.icon,
+            'color':self.color,
             'thumb': self.thumb,
             'linkedin': self.linkedin,
             'website': self.website,
@@ -57,6 +59,7 @@ class Founder(db.Model):
     name = db.Column(db.String(100))
     role = db.Column(db.String(100))
     linkedin = db.Column(db.String(200))
+    x_twitter = db.Column(db.String(200))
     pfp = db.Column(db.String(500))
 
     def to_dict(self):
@@ -65,6 +68,7 @@ class Founder(db.Model):
             'name': self.name,
             'role': self.role,
             'linkedin': self.linkedin,
+            'x_twitter':self.x_twitter,
             'pfp': self.pfp
         }
 
@@ -87,6 +91,7 @@ def create():
             latitude=data.get('latitude'),
             longitude=data.get('longitude'),
             icon=data.get('icon'),
+            color=data.get('color'),
             thumb=data.get('thumb'),
             linkedin=data.get('linkedin'),
             website=data.get('website'),
@@ -106,6 +111,7 @@ def create():
                 name=founder_data.get('name'),
                 role=founder_data.get('role'),
                 linkedin=founder_data.get('linkedin'),
+                x_twitter=founder_data.get('x_twitter'),
                 pfp=founder_data.get('pfp')
             )
             db.session.add(founder)
@@ -116,10 +122,18 @@ def create():
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
     
-@app.route('/initdb')
-def initdb():
-    db.create_all()
-    return "Initialized DB!"
+@app.route('/resetdb')
+def resetdb():
+    try:
+        # Drop all tables
+        db.drop_all()
+        # Recreate all tables
+        db.create_all()
+        return "Database reset: all tables dropped and recreated."
+    except Exception as e:
+        db.session.rollback()
+        return f"Error resetting database: {str(e)}"
+
 
 @app.route('/cleardb')
 def cleardb():
