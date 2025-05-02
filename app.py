@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
 from flask import redirect, make_response
+import bcrypt
 
 app = Flask(__name__)
 
@@ -73,6 +74,11 @@ class Founder(db.Model):
             'pfp': self.pfp
         }
 
+def isAdmin(pwd):
+    if pwd==None:
+        return False
+    return bcrypt.checkpw(pwd.encode('utf-8'),os.environ.get("ADMIN_PWD_HASHED").encode('utf-8'))
+
 @app.route('/')
 def index():
     companies = Company.query.all()
@@ -83,8 +89,10 @@ def index():
 def home():
     return render_template('home.html')
 
-@app.route('/create', methods=['POST'])
+@app.route('/create', methods=['GET','POST'])
 def create():
+    if not isAdmin(request.cookies.get('password')):
+        return redirect('/admin?redirect=/cleardb')
     try:
         data = request.get_json()
         new_company = Company(
@@ -125,6 +133,8 @@ def create():
     
 @app.route('/resetdb')
 def resetdb():
+    if not isAdmin(request.cookies.get('password')):
+        return redirect('/admin?redirect=/resetdb')
     try:
         # Drop all tables
         db.drop_all()
@@ -138,6 +148,8 @@ def resetdb():
 
 @app.route('/cleardb')
 def cleardb():
+    if not isAdmin(request.cookies.get('password')):
+        return redirect('/admin?redirect=/cleardb')
     try:
         # Delete all records from child table (Founder) first to maintain referential integrity
         Founder.query.delete()
@@ -155,7 +167,10 @@ def admin():
         return render_template('admin.html')
     elif request.method == 'POST':
         password = request.form.get('password')
-        redirect_url = request.args.get('redirect', '/')
+        if isAdmin(password):
+            redirect_url = request.args.get('redirect', '/')
+        else :
+            redirect_url = "/admin?redirect="+request.args.get('redirect', '/')
         response = make_response(redirect(redirect_url))
         response.set_cookie('password', password)
         return response
