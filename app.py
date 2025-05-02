@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
+from flask import redirect, make_response
 
 app = Flask(__name__)
 
@@ -147,3 +148,14 @@ def cleardb():
     except Exception as e:
         db.session.rollback()
         return f"Error clearing database: {str(e)}"
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    if request.method == 'GET':
+        return render_template('admin.html')
+    elif request.method == 'POST':
+        password = request.form.get('password')
+        redirect_url = request.args.get('redirect', '/')
+        response = make_response(redirect(redirect_url))
+        response.set_cookie('password', password)
+        return response
