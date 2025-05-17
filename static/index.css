@@ -23,6 +23,7 @@ a {
     height: 100vh;
     z-index: 0;
     overflow-y: hidden;
+    background-color: var(--ui-background);
 }
 
 body {
