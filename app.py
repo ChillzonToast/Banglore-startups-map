@@ -92,7 +92,9 @@ def home():
 @app.route('/create', methods=['GET','POST'])
 def create():
     if not isAdmin(request.cookies.get('password')):
-        return redirect('/admin?redirect=/cleardb')
+        return redirect('/admin?redirect=/create')
+    if request.method == 'GET':
+        return render_template('request.html')
     try:
         data = request.get_json()
         new_company = Company(
@@ -100,7 +102,7 @@ def create():
             latitude=data.get('latitude'),
             longitude=data.get('longitude'),
             icon=data.get('icon'),
-            color=data.get('color'),
+            color="white",
             thumb=data.get('thumb'),
             linkedin=data.get('linkedin'),
             website=data.get('website'),

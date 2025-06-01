@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../static/request.css">
+    <link rel="stylesheet" href="./static/request.css">
 
 </head>
 
@@ -88,51 +88,54 @@
             </div>
 
             <div class="d-flex flex-column align-items-left flex-1 w-100 gap-4">
-                <div class="d-flex flex-column align-items-left gap-2">
-                    <span class="form-title">Location (Drag the marker to set the location)</span>
-                    <div id="map"></div>
-                    <input type="hidden" name="latitude" value="12.965838">
-                    <input type="hidden" name="longitude" value="77.578926">
-                </div>
-                <div class="d-flex flex-column align-items-left gap-2">
-                    <span class="form-title">Startup icon link</span>
-                    <input type="url" name="icon" required>
-                </div>
-                <div class="d-flex flex-column align-items-left gap-2">
-                    <span class="form-title">backdrop image link</span>
-                    <input type="url" name="backdrop" required>
-                </div>
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <span class="form-title">Preview</span>
+                <div class="d-flex flex-column align-items-center  gap-2">
+                    <div>
+                        <span class="form-title">Preview</span>
+                        <div class="d-flex flex-column mb-3" id="info">
 
-                    <div class="d-flex flex-column" id="info">
-
-                        <div class="m-3 thumbnail unselected">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis" />
+                            <div class="m-3 thumbnail unselected">
+                                <img
+                                    src="https://media.licdn.com/dms/image/v2/D5622AQGgZwllEtDpIg/feedshare-shrink_800/B56ZP5EZ3qGQAg-/0/1735050510459?e=2147483647&v=beta&t=Et48M9TTvF6P-VHXyZPNbKD-PpIj6xm7ocL1RS-iqis" />
 
 
-                            <div class="gradient" style="border-radius: 12px;"></div>
-                            <div id="logo-brand" class="d-flex flex-row justify-content-between mx-3">
-                                <img class="me-3" id="logo" src="../static/curefit.png" alt="">
-                                <div>
-                                    <h1 id="name">CureFit HQ Office</h1>
-                                    <p id="company">Fintech</p>
+                                <div class="gradient" style="border-radius: 12px;"></div>
+                                <div id="logo-brand" class="d-flex flex-row justify-content-between mx-3">
+                                    <img class="me-3" id="logo" src="./static/curefit.png" alt="">
+                                    <div>
+                                        <h1 id="name">CureFit HQ Office</h1>
+                                        <p id="company">Fintech</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div id="details" class="unselected" style="overflow-y: scroll;">
+                            <div id="details" class="unselected" style="overflow-y: scroll;">
 
-                            <p id="description" class="mx-3 ">
-                                Lorem ipsum dolor sit amet consectetur. Fringilla dolor nunc volutpat amet ac
-                                porttitor
-                                mauris neque.
-                                Nec
-                                ultrices proin lobortis viverra leo odio urna.
-                            </p>
+                                <p id="description" class="mx-3 ">
+                                    Lorem ipsum dolor sit amet consectetur. Fringilla dolor nunc volutpat amet ac
+                                    porttitor
+                                    mauris neque.
+                                    Nec
+                                    ultrices proin lobortis viverra leo odio urna.
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <div class="d-flex flex-column align-items-left gap-2 w-100">
+                        <span class="form-title">Startup icon link</span>
+                        <input type="url" name="icon" required>
+                    </div>
+                    <div class="d-flex flex-column align-items-left gap-2 w-100">
+                        <span class="form-title">backdrop image link</span>
+                        <input type="url" name="backdrop" required>
+                    </div>
+                    <div class="d-flex flex-column align-items-left gap-2 w-100">
+                        <span class="form-title">Location (Drag the marker to set the location)</span>
+                        <div id="map"></div>
+                        <input type="hidden" name="latitude" value="12.965838">
+                        <input type="hidden" name="longitude" value="77.578926">
+                    </div>
+                    
+
 
                 </div>
             </div>
@@ -144,262 +147,49 @@
                 <div class="d-flex flex-row align-items-center gap-3 w-100">
                     <div class="d-flex flex-column align-items-left gap-2 w-100">
                         <span class="form-title">Name</span>
-                        <input type="url" name="employees" placeholder="Eg: Surjith Kumar" required>
+                        <input type="url" name="founder-form-name" placeholder="Eg: Surjith Kumar" required>
                     </div>
                     <div class="d-flex flex-column align-items-left gap-2 w-100">
                         <span class="form-title">Role</span>
-                        <input type="url" name="openings" placeholder="Eg: CEO" required>
+                        <input type="url" name="founder-form-role" placeholder="Eg: CEO" required>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-items-left gap-2 w-100">
                     <span class="form-title">LinkedIn</span>
-                    <input type="url" name="linkedin" placeholder="Eg: https://www.linkedin.com/in/surjithkumar/"
-                        required>
+                    <input type="url" name="founder-form-linkedin"
+                        placeholder="Eg: https://www.linkedin.com/in/surjithkumar/" required>
                 </div>
                 <div class="d-flex flex-column align-items-left gap-2 w-100">
                     <span class="form-title">X</span>
-                    <input type="url" name="x-twitter" placeholder="Eg: https://x.com/surjithkumar" required>
+                    <input type="url" name="founder-form-x-twitter" placeholder="Eg: https://x.com/surjithkumar"
+                        required>
                 </div>
                 <div class="d-flex flex-row align-items-end gap-3 w-100">
                     <div class="d-flex flex-column align-items-left gap-2 w-100">
                         <span class="form-title">Profile Picture</span>
-                        <input type="url" name="profile-picture" placeholder="Eg: https://example.com/profile.jpg"
-                            required>
+                        <input type="url" name="founder-form-profile-picture"
+                            placeholder="Eg: https://example.com/profile.jpg" required>
                     </div>
                     <div class="d-flex flex-column align-items-center justify-content-end gap-2 h-100">
-                        <img class="me-2 founder-logo"
-                            src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
+                        <img class="me-2 founder-logo" src="founder-logo.png"
+                            onerror="this.onerror=null; this.src='https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg'"
                             alt="">
                     </div>
                 </div>
                 <div class="d-flex flex-row justify-content-end gap-3 w-100 mt-3">
-                    <button class="btn btn-light">Add Founder</button>
+                    <button id="add-founder" class="btn btn-light">Add Founder</button>
                 </div>
             </div>
 
             <div id="founders-list" class="d-flex flex-column align-items-left gap-4 w-100 p-3">
-
-                <div class="founder-item d-flex flex-row align-items-center w-100 justify-content-center px-3">
-                    <span class="bullet-point" style="color: #DCDBDB; font-size: 30px;">•</span>
-                    <div class="mx-3 d-flex flex-row justify-content-between w-100">
-                        <div class="d-flex flex-row ">
-                            <img class="me-2 founder-logo"
-                                src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
-                                alt="">
-                            <div class="d-flex flex-column justify-content-center">
-                                <h1 class="founder-name">Priya Sharma</h1>
-                                <p class="founder-role m-0">CEO</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center gap-2">
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <g clip-path="url(#clip0_128_565)">
-                                        <mask id="mask0_128_565" style="mask-type:luminance" maskUnits="userSpaceOnUse"
-                                            x="4" y="4" width="16" height="16">
-                                            <path d="M4 4H20V20H4V4Z" fill="white" />
-                                        </mask>
-                                        <g mask="url(#mask0_128_565)">
-                                            <path
-                                                d="M16.6 4.74969H19.0537L13.6937 10.8914L20 19.2503H15.0629L11.1931 14.1817L6.77029 19.2503H4.31429L10.0469 12.6788L4 4.75084H9.06286L12.5554 9.38284L16.6 4.74969ZM15.7371 17.7783H17.0971L8.32 6.14512H6.86171L15.7371 17.7783Z"
-                                                fill="#DCDBDB" />
-                                        </g>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_128_565">
-                                            <rect width="16" height="16" fill="white" transform="translate(4 4)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-
-                            </a>
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0955 9.75475H12.8466V11.1251C13.2429 10.337 14.2592 9.62883 15.7859 9.62883C18.7125 9.62883 19.4073 11.1977 19.4073 14.0762V19.4073H16.4444V14.7318C16.4444 13.0925 16.0481 12.1681 15.0392 12.1681C13.6399 12.1681 13.0585 13.1644 13.0585 14.731V19.4073H10.0955V9.75475ZM5.01475 19.2814H7.97771V9.62883H5.01475V19.2814ZM8.40216 6.48142C8.40227 6.72977 8.35301 6.97567 8.25726 7.20482C8.16151 7.43397 8.02116 7.6418 7.84438 7.81623C7.66708 7.99262 7.45676 8.13233 7.22543 8.22741C6.99411 8.32248 6.74633 8.37103 6.49623 8.37031C5.99223 8.36917 5.50876 8.17052 5.14957 7.81697C4.97349 7.6419 4.83366 7.43382 4.73808 7.20465C4.6425 6.97549 4.59304 6.72972 4.59253 6.48142C4.59253 5.97994 4.79253 5.49994 5.15031 5.14586C5.5086 4.79096 5.99266 4.59207 6.49697 4.59253C7.00216 4.59253 7.4866 4.79179 7.84438 5.14586C8.20216 5.49994 8.40216 5.97994 8.40216 6.48142Z"
-                                        fill="#DCDBDB" />
-                                </svg>
-
-                            </a>
-
-                        </div>
-                    </div>
-                    <span class="delete-founder p-2">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 2V16C15 16.5 14.5 17 14 17H9H4C3.5 17 3 16.5 3 16V2" stroke="#D77777"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M1 2H17" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M7 1H11M7 6V13M11 6V13" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-
-                    </span>
-                </div>
-                <div class="founder-item d-flex flex-row align-items-center w-100 justify-content-center px-3">
-                    <span class="bullet-point" style="color: #DCDBDB; font-size: 30px;">•</span>
-                    <div class="mx-3 d-flex flex-row justify-content-between w-100">
-                        <div class="d-flex flex-row ">
-                            <img class="me-2 founder-logo"
-                                src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
-                                alt="">
-                            <div class="d-flex flex-column justify-content-center">
-                                <h1 class="founder-name">Priya Sharma</h1>
-                                <p class="founder-role m-0">CEO</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center gap-2">
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <g clip-path="url(#clip0_128_565)">
-                                        <mask id="mask0_128_565" style="mask-type:luminance" maskUnits="userSpaceOnUse"
-                                            x="4" y="4" width="16" height="16">
-                                            <path d="M4 4H20V20H4V4Z" fill="white" />
-                                        </mask>
-                                        <g mask="url(#mask0_128_565)">
-                                            <path
-                                                d="M16.6 4.74969H19.0537L13.6937 10.8914L20 19.2503H15.0629L11.1931 14.1817L6.77029 19.2503H4.31429L10.0469 12.6788L4 4.75084H9.06286L12.5554 9.38284L16.6 4.74969ZM15.7371 17.7783H17.0971L8.32 6.14512H6.86171L15.7371 17.7783Z"
-                                                fill="#DCDBDB" />
-                                        </g>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_128_565">
-                                            <rect width="16" height="16" fill="white" transform="translate(4 4)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-
-                            </a>
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0955 9.75475H12.8466V11.1251C13.2429 10.337 14.2592 9.62883 15.7859 9.62883C18.7125 9.62883 19.4073 11.1977 19.4073 14.0762V19.4073H16.4444V14.7318C16.4444 13.0925 16.0481 12.1681 15.0392 12.1681C13.6399 12.1681 13.0585 13.1644 13.0585 14.731V19.4073H10.0955V9.75475ZM5.01475 19.2814H7.97771V9.62883H5.01475V19.2814ZM8.40216 6.48142C8.40227 6.72977 8.35301 6.97567 8.25726 7.20482C8.16151 7.43397 8.02116 7.6418 7.84438 7.81623C7.66708 7.99262 7.45676 8.13233 7.22543 8.22741C6.99411 8.32248 6.74633 8.37103 6.49623 8.37031C5.99223 8.36917 5.50876 8.17052 5.14957 7.81697C4.97349 7.6419 4.83366 7.43382 4.73808 7.20465C4.6425 6.97549 4.59304 6.72972 4.59253 6.48142C4.59253 5.97994 4.79253 5.49994 5.15031 5.14586C5.5086 4.79096 5.99266 4.59207 6.49697 4.59253C7.00216 4.59253 7.4866 4.79179 7.84438 5.14586C8.20216 5.49994 8.40216 5.97994 8.40216 6.48142Z"
-                                        fill="#DCDBDB" />
-                                </svg>
-
-                            </a>
-
-                        </div>
-                    </div>
-                    <span class="delete-founder p-2">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 2V16C15 16.5 14.5 17 14 17H9H4C3.5 17 3 16.5 3 16V2" stroke="#D77777"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M1 2H17" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M7 1H11M7 6V13M11 6V13" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-
-                    </span>
-                </div>
-                <div class="founder-item d-flex flex-row align-items-center w-100 justify-content-center px-3">
-                    <span class="bullet-point" style="color: #DCDBDB; font-size: 30px;">•</span>
-                    <div class="mx-3 d-flex flex-row justify-content-between w-100">
-                        <div class="d-flex flex-row ">
-                            <img class="me-2 founder-logo"
-                                src="https://raisingtime.com/wp-content/uploads/2022/04/how-to-overcome-fear-150x150.jpg"
-                                alt="">
-                            <div class="d-flex flex-column justify-content-center">
-                                <h1 class="founder-name">Priya Sharma</h1>
-                                <p class="founder-role m-0">CEO</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center gap-2">
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <g clip-path="url(#clip0_128_565)">
-                                        <mask id="mask0_128_565" style="mask-type:luminance" maskUnits="userSpaceOnUse"
-                                            x="4" y="4" width="16" height="16">
-                                            <path d="M4 4H20V20H4V4Z" fill="white" />
-                                        </mask>
-                                        <g mask="url(#mask0_128_565)">
-                                            <path
-                                                d="M16.6 4.74969H19.0537L13.6937 10.8914L20 19.2503H15.0629L11.1931 14.1817L6.77029 19.2503H4.31429L10.0469 12.6788L4 4.75084H9.06286L12.5554 9.38284L16.6 4.74969ZM15.7371 17.7783H17.0971L8.32 6.14512H6.86171L15.7371 17.7783Z"
-                                                fill="#DCDBDB" />
-                                        </g>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_128_565">
-                                            <rect width="16" height="16" fill="white" transform="translate(4 4)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-
-                            </a>
-                            <a href="https://www.linkedin.com/in/ibinu-jaleel-163000323/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="4" fill="#272625" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0955 9.75475H12.8466V11.1251C13.2429 10.337 14.2592 9.62883 15.7859 9.62883C18.7125 9.62883 19.4073 11.1977 19.4073 14.0762V19.4073H16.4444V14.7318C16.4444 13.0925 16.0481 12.1681 15.0392 12.1681C13.6399 12.1681 13.0585 13.1644 13.0585 14.731V19.4073H10.0955V9.75475ZM5.01475 19.2814H7.97771V9.62883H5.01475V19.2814ZM8.40216 6.48142C8.40227 6.72977 8.35301 6.97567 8.25726 7.20482C8.16151 7.43397 8.02116 7.6418 7.84438 7.81623C7.66708 7.99262 7.45676 8.13233 7.22543 8.22741C6.99411 8.32248 6.74633 8.37103 6.49623 8.37031C5.99223 8.36917 5.50876 8.17052 5.14957 7.81697C4.97349 7.6419 4.83366 7.43382 4.73808 7.20465C4.6425 6.97549 4.59304 6.72972 4.59253 6.48142C4.59253 5.97994 4.79253 5.49994 5.15031 5.14586C5.5086 4.79096 5.99266 4.59207 6.49697 4.59253C7.00216 4.59253 7.4866 4.79179 7.84438 5.14586C8.20216 5.49994 8.40216 5.97994 8.40216 6.48142Z"
-                                        fill="#DCDBDB" />
-                                </svg>
-
-                            </a>
-
-                        </div>
-                    </div>
-                    <span class="delete-founder p-2">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 2V16C15 16.5 14.5 17 14 17H9H4C3.5 17 3 16.5 3 16V2" stroke="#D77777"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M1 2H17" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M7 1H11M7 6V13M11 6V13" stroke="#D77777" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-
-                    </span>
-                </div>
-
             </div>
         </div>
         <div class="d-flex flex-row justify-content-center gap-3 w-100" style="margin-top: 100px;margin-bottom: 100px;">
-            <button class="btn btn-light">Showcase Startup</button>
+            <button id="submit-btn" class="btn btn-light">Showcase Startup</button>
         </div>
     </div>
 </body>
 
-<script>
-    var map = L.map('map').setView([12.965838, 77.578926], 15);
-    var Jawg_Dark = L.maplibreGL({
-        style: 'https://api.jawg.io/styles/jawg-dark.json?access-token=UqyfdxME4ffAN7Cl8TnzU7twAIF5Luz197VpgiJwZRhPVVS2EDdIPyMvXeO36w9P',
-        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        edgeBufferTiles: 1
-    });
-    Jawg_Dark.addTo(map);
-    map.setMinZoom(12);
-    map.setZoom(12);
-    map.setMaxZoom(17);
-    const southWest = L.latLng(12.83724, 77.47662);
-    const northEast = L.latLng(13.06343, 77.69652);
-    const bounds = L.latLngBounds(southWest, northEast);
-    map.setMaxBounds(bounds);
-
-
-    // Add draggable marker at center
-    var marker = L.marker([12.965838, 77.578926], {
-        draggable: true
-    }).addTo(map);
-
-    // Update hidden form fields with coordinates when marker is dragged
-    marker.on('dragend', function (e) {
-        var position = marker.getLatLng();
-        document.querySelector('input[name="latitude"]').value = position.lat;
-        document.querySelector('input[name="longitude"]').value = position.lng;
-    });
-
-</script>
+<script src="./static/request.js"></script>
 
 </html>
